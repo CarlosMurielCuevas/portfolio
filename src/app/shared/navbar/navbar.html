@@ -1,1 +1,25 @@
-<p>navbar works!</p>
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="contenedor navbar__contenedor">
+
+    <a class="navbar__logo" routerLink="/" (click)="cerrarMenu()">
+      Carlos <span>Muriel</span>
+    </a>
+
+    <ul class="navbar__menu" [class.activo]="menuAbierto()">
+      <li><a routerLink="/" routerLinkActive="activo" [routerLinkActiveOptions]="{exact: true}" (click)="cerrarMenu()">Inicio</a></li>
+      <li><a routerLink="/sobre-mi" routerLinkActive="activo" (click)="cerrarMenu()">Sobre mí</a></li>
+      <li><a routerLink="/experiencia" routerLinkActive="activo" (click)="cerrarMenu()">Experiencia</a></li>
+      <li><a routerLink="/habilidades" routerLinkActive="activo" (click)="cerrarMenu()">Habilidades</a></li>
+      <li><a routerLink="/educacion" routerLinkActive="activo" (click)="cerrarMenu()">Educación</a></li>
+      <li><a routerLink="/proyectos" routerLinkActive="activo" (click)="cerrarMenu()">Proyectos</a></li>
+      <li><a routerLink="/contacto" routerLinkActive="activo" (click)="cerrarMenu()">Contacto</a></li>
+    </ul>
+
+    <button class="navbar__hamburguesa" (click)="toggleMenu()" [class.activo]="menuAbierto()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+</nav>

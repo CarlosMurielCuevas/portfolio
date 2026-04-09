@@ -1,0 +1,71 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.footer {
+  background-color: $color-fondo-secundario;
+  padding: 3rem 0 1.5rem;
+  margin-top: auto;
+
+  &__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-texto;
+
+    span {
+      color: $color-primario;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+
+    a {
+      color: $color-texto-secundario;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: $transicion;
+
+      &:hover {
+        color: $color-primario;
+      }
+    }
+  }
+
+  &__redes {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: $color-texto-secundario;
+      transition: $transicion;
+
+      &:hover {
+        color: $color-primario;
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 0.85rem;
+    color: $color-texto-secundario;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    width: 100%;
+    margin: 0;
+  }
+}
