@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sobre-mi',
-  imports: [],
+  standalone: true,
+  imports: [RouterLink],
   templateUrl: './sobre-mi.html',
-  styleUrl: './sobre-mi.scss',
+  styleUrl: './sobre-mi.scss'
 })
-export class SobreMiComponent {
-
-}
+export class SobreMiComponent {}
