@@ -1,0 +1,118 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.experiencia {
+  background-color: $color-fondo-secundario;
+
+  &__timeline {
+    position: relative;
+    padding-left: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: linear-gradient(to bottom, $color-primario, transparent);
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.actual .experiencia__punto {
+      background-color: #22c55e;
+      box-shadow: 0 0 10px #22c55e;
+    }
+  }
+
+  &__punto {
+    position: absolute;
+    left: -2.4rem;
+    top: 1.5rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $color-primario;
+    border: 2px solid $color-fondo-secundario;
+    box-shadow: 0 0 10px $color-primario;
+  }
+
+  &__card {
+    background-color: $color-fondo;
+    border-radius: $border-radius-lg;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: $transicion;
+
+    &:hover {
+      border-color: $color-primario;
+      box-shadow: $sombra-lg;
+      transform: translateX(5px);
+    }
+  }
+
+  &__header {
+    @include flex-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__puesto {
+    font-size: 1.2rem;
+    color: $color-texto;
+    margin-bottom: 0.3rem;
+  }
+
+  &__empresa {
+    color: $color-primario;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  &__periodo {
+    background-color: rgba($color-primario, 0.1);
+    color: $color-primario;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  &__descripcion {
+    color: $color-texto-secundario;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  &__tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__tag {
+    background-color: rgba($color-primario, 0.15);
+    color: $color-acento;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba($color-primario, 0.3);
+  }
+}

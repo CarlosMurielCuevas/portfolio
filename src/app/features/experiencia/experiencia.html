@@ -1,1 +1,42 @@
-<p>experiencia works!</p>
+<section class="seccion experiencia">
+  <div class="contenedor">
+
+    <div class="seccion-titulo">
+      <h2>Experiencia</h2>
+      <span></span>
+    </div>
+
+    <div class="experiencia__timeline">
+      <div
+        class="experiencia__item"
+        *ngFor="let exp of experiencias"
+        [class.actual]="exp.actual"
+      >
+        <div class="experiencia__punto"></div>
+
+        <div class="experiencia__card">
+          <div class="experiencia__header">
+            <div>
+              <h3 class="experiencia__puesto">{{ exp.puesto }}</h3>
+              <p class="experiencia__empresa">{{ exp.empresa }}</p>
+            </div>
+            <span class="experiencia__periodo">{{ exp.periodo }}</span>
+          </div>
+
+          <p class="experiencia__descripcion">{{ exp.descripcion }}</p>
+
+          <div class="experiencia__tecnologias" *ngIf="exp.tecnologias.length > 0">
+            <span
+              class="experiencia__tag"
+              *ngFor="let tech of exp.tecnologias"
+            >
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
