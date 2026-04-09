@@ -1,1 +1,54 @@
-<p>habilidades works!</p>
+<section class="seccion habilidades">
+  <div class="contenedor">
+
+    <div class="seccion-titulo">
+      <h2>Habilidades</h2>
+      <span></span>
+    </div>
+
+    <div class="habilidades__contenedor">
+
+      <div class="habilidades__grupo">
+        <h3>Frontend</h3>
+        <div class="habilidades__lista">
+          <div class="habilidades__item" *ngFor="let skill of frontend">
+            <div class="habilidades__item-header">
+              <span>{{ skill.nombre }}</span>
+              <span>{{ skill.nivel }}%</span>
+            </div>
+            <div class="habilidades__barra">
+              <div class="habilidades__progreso" [style.width.%]="skill.nivel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="habilidades__grupo">
+        <h3>Backend</h3>
+        <div class="habilidades__lista">
+          <div class="habilidades__item" *ngFor="let skill of backend">
+            <div class="habilidades__item-header">
+              <span>{{ skill.nombre }}</span>
+              <span>{{ skill.nivel }}%</span>
+            </div>
+            <div class="habilidades__barra">
+              <div class="habilidades__progreso" [style.width.%]="skill.nivel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="habilidades__herramientas">
+      <h3>Herramientas</h3>
+      <div class="habilidades__herramientas-grid">
+        <div class="habilidades__herramienta" *ngFor="let tool of herramientas">
+          <span class="habilidades__herramienta-icono">{{ tool.icono }}</span>
+          <span>{{ tool.nombre }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

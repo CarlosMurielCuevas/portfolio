@@ -1,0 +1,108 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.habilidades {
+  background-color: $color-fondo;
+
+  &__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    @include tablet-down {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__grupo {
+    h3 {
+      font-size: 1.3rem;
+      color: $color-primario;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba($color-primario, 0.3);
+    }
+  }
+
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__item {
+    &-header {
+      @include flex-between;
+      margin-bottom: 0.4rem;
+
+      span {
+        font-size: 0.95rem;
+        color: $color-texto;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__barra {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  &__progreso {
+    height: 100%;
+    background: linear-gradient(90deg, $color-primario, $color-acento);
+    border-radius: 4px;
+    transition: width 1s ease;
+  }
+
+  &__herramientas {
+    h3 {
+      font-size: 1.3rem;
+      color: $color-primario;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba($color-primario, 0.3);
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      @include tablet-down {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  &__herramienta {
+    background-color: $color-fondo-secundario;
+    border-radius: $border-radius;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: $transicion;
+
+    &:hover {
+      border-color: $color-primario;
+      transform: translateY(-3px);
+    }
+
+    &-icono {
+      font-size: 1.8rem;
+    }
+
+    span:last-child {
+      font-size: 0.85rem;
+      color: $color-texto-secundario;
+      text-align: center;
+    }
+  }
+}
