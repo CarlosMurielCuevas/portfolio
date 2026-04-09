@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-fondo;
+  color: $color-texto;
+  font-family: $fuente-principal;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding-top: $tamanio-navbar;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.seccion {
+  padding: 5rem 0;
+}
+
+.seccion-titulo {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  span {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: $color-primario;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+}
