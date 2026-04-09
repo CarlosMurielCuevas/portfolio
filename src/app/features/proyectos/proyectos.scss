@@ -1,0 +1,94 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.proyectos {
+  background-color: $color-fondo;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @include tablet-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background-color: $color-fondo-secundario;
+    border-radius: $border-radius-lg;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: $transicion;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    &:hover {
+      border-color: $color-primario;
+      transform: translateY(-5px);
+      box-shadow: $sombra-lg;
+    }
+
+    &.destacado {
+      border-color: rgba($color-primario, 0.4);
+    }
+  }
+
+  &__card-header {
+    @include flex-between;
+  }
+
+  &__icono {
+    font-size: 2rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: $color-texto-secundario;
+      transition: $transicion;
+
+      &:hover {
+        color: $color-primario;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  &__titulo {
+    font-size: 1.1rem;
+    color: $color-texto;
+    margin: 0;
+  }
+
+  &__descripcion {
+    font-size: 0.9rem;
+    color: $color-texto-secundario;
+    flex-grow: 1;
+    margin: 0;
+  }
+
+  &__tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+
+  &__tag {
+    background-color: rgba($color-primario, 0.15);
+    color: $color-acento;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    border: 1px solid rgba($color-primario, 0.3);
+  }
+}
