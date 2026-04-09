@@ -1,0 +1,87 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.educacion {
+  background-color: $color-fondo-secundario;
+
+  &__contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+
+    @include tablet-down {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__subtitulo {
+    font-size: 1.3rem;
+    color: $color-texto;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba($color-primario, 0.3);
+
+    span {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__card {
+    display: flex;
+    gap: 1rem;
+    background-color: $color-fondo;
+    border-radius: $border-radius-lg;
+    padding: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: $transicion;
+
+    &:hover {
+      border-color: $color-primario;
+      transform: translateY(-3px);
+      box-shadow: $sombra;
+    }
+  }
+
+  &__icono {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    h4 {
+      font-size: 1rem;
+      color: $color-texto;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $color-texto-secundario;
+      margin: 0;
+    }
+  }
+
+  &__tipo {
+    font-size: 0.8rem;
+    color: $color-primario;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &__periodo {
+    font-size: 0.85rem;
+    color: $color-texto-secundario;
+    font-style: italic;
+  }
+}

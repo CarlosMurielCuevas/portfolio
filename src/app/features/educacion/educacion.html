@@ -1,1 +1,46 @@
-<p>educacion works!</p>
+<section class="seccion educacion">
+  <div class="contenedor">
+
+    <div class="seccion-titulo">
+      <h2>Educación</h2>
+      <span></span>
+    </div>
+
+    <div class="educacion__contenedor">
+
+      <div class="educacion__columna">
+        <h3 class="educacion__subtitulo">
+          <span>🎓</span> Formación académica
+        </h3>
+        <div class="educacion__lista">
+          <div class="educacion__card" *ngFor="let edu of educacion">
+            <div class="educacion__icono">{{ edu.icono }}</div>
+            <div class="educacion__info">
+              <span class="educacion__tipo">{{ edu.tipo }}</span>
+              <h4>{{ edu.titulo }}</h4>
+              <p>{{ edu.centro }}</p>
+              <span class="educacion__periodo">{{ edu.periodo }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="educacion__columna">
+        <h3 class="educacion__subtitulo">
+          <span>📖</span> Cursos y certificaciones
+        </h3>
+        <div class="educacion__lista">
+          <div class="educacion__card" *ngFor="let curso of cursos">
+            <div class="educacion__icono">{{ curso.icono }}</div>
+            <div class="educacion__info">
+              <span class="educacion__tipo">{{ curso.plataforma }}</span>
+              <h4>{{ curso.titulo }}</h4>
+              <span class="educacion__periodo">{{ curso.periodo }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
