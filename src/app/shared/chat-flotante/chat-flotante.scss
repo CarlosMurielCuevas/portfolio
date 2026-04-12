@@ -1,0 +1,250 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.chat-flotante {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+
+  &__boton {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: $color-primario;
+    border: none;
+    cursor: pointer;
+    @include flex-center;
+    color: $color-blanco;
+    box-shadow: $sombra-lg;
+    transition: $transicion;
+    margin-left: auto;
+
+    &:hover {
+      background-color: $color-secundario;
+      transform: scale(1.1);
+    }
+
+    &.abierto {
+      background-color: $color-fondo-secundario;
+    }
+  }
+
+  &__ventana {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 350px;
+    max-height: 500px;
+    background-color: $color-fondo-secundario;
+    border-radius: $border-radius-lg;
+    border: 1px solid rgba($color-primario, 0.3);
+    box-shadow: $sombra-lg;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+    transition: $transicion;
+
+    &.abierto {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+
+    @include mobile {
+      width: 300px;
+    }
+  }
+
+  &__header {
+    @include flex-between;
+    padding: 1rem;
+    background: linear-gradient(135deg, $color-primario, $color-secundario);
+    flex-shrink: 0;
+
+    &-info {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+  }
+
+  &__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    @include flex-center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: $color-blanco;
+    flex-shrink: 0;
+  }
+
+  &__nombre {
+    color: $color-blanco;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__estado {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+
+    &::before {
+      content: '● ';
+      color: #22c55e;
+      font-size: 0.6rem;
+    }
+  }
+
+  &__cerrar {
+    background: none;
+    border: none;
+    color: $color-blanco;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem;
+    transition: $transicion;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__mensajes {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    min-height: 0;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba($color-primario, 0.3);
+      border-radius: 2px;
+    }
+  }
+
+  &__mensaje {
+    max-width: 80%;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    p {
+      margin: 0;
+      font-size: 0.88rem;
+      color: $color-texto;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      white-space: pre-wrap;
+    }
+
+    &.bot {
+      background-color: $color-fondo;
+      border-bottom-left-radius: 4px;
+      align-self: flex-start;
+    }
+
+    &.usuario {
+      background-color: $color-primario;
+      border-bottom-right-radius: 4px;
+      align-self: flex-end;
+
+      p {
+        color: $color-blanco;
+      }
+    }
+  }
+
+  &__typing {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 0.2rem 0;
+
+    span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-primario;
+      animation: typing 1s infinite;
+
+      &:nth-child(2) { animation-delay: 0.2s; }
+      &:nth-child(3) { animation-delay: 0.4s; }
+    }
+  }
+
+  &__input {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+
+    input {
+      flex: 1;
+      background-color: $color-fondo;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 0.6rem 1rem;
+      color: $color-texto;
+      font-size: 0.88rem;
+      outline: none;
+      transition: $transicion;
+      min-width: 0;
+
+      &::placeholder {
+        color: $color-texto-secundario;
+      }
+
+      &:focus {
+        border-color: $color-primario;
+      }
+    }
+
+    button {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $color-primario;
+      border: none;
+      cursor: pointer;
+      @include flex-center;
+      color: $color-blanco;
+      transition: $transicion;
+      flex-shrink: 0;
+
+      &:hover:not(:disabled) {
+        background-color: $color-secundario;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+@keyframes typing {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(-4px); opacity: 1; }
+}
