@@ -61,7 +61,7 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${OPENROUTER_KEY}`,
-        'HTTP-Referer': 'https://portfolio-three-rho-i91r5ox32f.vercel.app',
+        'HTTP-Referer': 'https://portfolio-qqierfjtr-carlosmurielcuevas-projects.vercel.app',
         'X-Title': 'Portfolio Carlos Muriel'
       },
       body: JSON.stringify({
@@ -74,6 +74,7 @@ export default async function handler(req, res) {
     });
 
     const data = await response.json();
+    console.log('Respuesta completa:', JSON.stringify(data));
     const respuesta = data.choices[0].message.content;
     return res.status(200).json({ respuesta });
 
