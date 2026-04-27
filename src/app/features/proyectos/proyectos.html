@@ -31,6 +31,9 @@
         </div>
 
         <h3 class="proyectos__titulo">{{ proyecto.titulo }}</h3>
+        <span class="proyectos__estado" *ngIf="proyecto.estado">
+          🚧 {{ proyecto.estado }}
+        </span>
         <p class="proyectos__descripcion">{{ proyecto.descripcion }}</p>
 
         <div class="proyectos__tecnologias">
