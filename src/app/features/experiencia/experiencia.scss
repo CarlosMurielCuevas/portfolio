@@ -94,10 +94,22 @@
     white-space: nowrap;
   }
 
-  &__descripcion {
+  &__ubicacion {
+    color: $color-texto-secundario;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+  }
+
+  &__logros {
     color: $color-texto-secundario;
     font-size: 0.95rem;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+
+    li::marker {
+      color: $color-primario;
+    }
   }
 
   &__tecnologias {

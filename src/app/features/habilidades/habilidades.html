@@ -40,11 +40,21 @@
 
     </div>
 
-    <div class="habilidades__herramientas">
-      <h3>Herramientas</h3>
-      <div class="habilidades__herramientas-grid">
-        <div class="habilidades__herramienta" *ngFor="let tool of herramientas">
-          <span class="habilidades__herramienta-icono">{{ tool.icono }}</span>
+    <div class="habilidades__bloque">
+      <h3>Inteligencia artificial</h3>
+      <div class="habilidades__bloque-grid">
+        <div class="habilidades__chip" *ngFor="let item of ia">
+          <span class="habilidades__chip-icono">{{ item.icono }}</span>
+          <span>{{ item.nombre }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="habilidades__bloque">
+      <h3>Herramientas y metodologías</h3>
+      <div class="habilidades__bloque-grid">
+        <div class="habilidades__chip" *ngFor="let tool of herramientas">
+          <span class="habilidades__chip-icono">{{ tool.icono }}</span>
           <span>{{ tool.nombre }}</span>
         </div>
       </div>

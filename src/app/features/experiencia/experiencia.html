@@ -19,11 +19,14 @@
             <div>
               <h3 class="experiencia__puesto">{{ exp.puesto }}</h3>
               <p class="experiencia__empresa">{{ exp.empresa }}</p>
+              <p class="experiencia__ubicacion">{{ exp.ubicacion }}</p>
             </div>
             <span class="experiencia__periodo">{{ exp.periodo }}</span>
           </div>
 
-          <p class="experiencia__descripcion">{{ exp.descripcion }}</p>
+          <ul class="experiencia__logros">
+            <li *ngFor="let logro of exp.logros">{{ logro }}</li>
+          </ul>
 
           <div class="experiencia__tecnologias" *ngIf="exp.tecnologias.length > 0">
             <span

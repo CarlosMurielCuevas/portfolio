@@ -24,9 +24,20 @@ export class HabilidadesComponent {
     { nombre: 'PostgreSQL', nivel: 65 },
   ];
 
+  ia = [
+    { nombre: 'Agentes de IA', icono: '🤖' },
+    { nombre: 'LLMs', icono: '🧠' },
+    { nombre: 'IA generativa', icono: '✨' },
+    { nombre: 'Prompt engineering', icono: '💬' },
+    { nombre: 'Claude', icono: '✴️' },
+    { nombre: 'Automatización de procesos', icono: '⚙️' },
+  ];
+
   herramientas = [
-    { nombre: 'VS Code', icono: '🛠️' },
     { nombre: 'Git / GitHub', icono: '🐙' },
+    { nombre: 'Jira', icono: '📋' },
+    { nombre: 'Bitbucket', icono: '🪣' },
+    { nombre: 'VS Code', icono: '🛠️' },
     { nombre: 'Apache NetBeans', icono: '☕' },
     { nombre: 'Scrum / Agile', icono: '🔄' },
   ];

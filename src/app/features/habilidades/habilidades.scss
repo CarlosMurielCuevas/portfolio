@@ -59,7 +59,11 @@
     transition: width 1s ease;
   }
 
-  &__herramientas {
+  &__bloque {
+    & + & {
+      margin-top: 3rem;
+    }
+
     h3 {
       font-size: 1.3rem;
       color: $color-primario;
@@ -70,16 +74,20 @@
 
     &-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 1rem;
 
       @include tablet-down {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include mobile {
         grid-template-columns: repeat(2, 1fr);
       }
     }
   }
 
-  &__herramienta {
+  &__chip {
     background-color: $color-fondo-secundario;
     border-radius: $border-radius;
     padding: 1.2rem;

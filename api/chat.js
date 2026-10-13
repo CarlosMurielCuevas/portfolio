@@ -25,26 +25,34 @@ export default async function handler(req, res) {
 
     PERFIL:
     - Nombre: Carlos Muriel Cuevas
-    - Puesto: Junior Web Developer Fullstack
+    - Puesto: Desarrollador Junior Fullstack · Agentes de IA
+    - Ubicación: Humanes de Madrid, Madrid (España)
     - Email: carlosmurielcuevas@gmail.com
-    - Teléfono: 682721487
+    - Teléfono: +34 682 721 487
     - GitHub: https://github.com/CarlosMurielCuevas
-    - Disponibilidad: Disponible para nuevas oportunidades laborales
+    - LinkedIn: https://www.linkedin.com/in/carlos-muriel-cuevas-85a07a383
+    - Portfolio: https://portfolio-three-rho-i91r5ox32f.vercel.app
+    - Situación actual: trabaja como Desarrollador de Agentes IA en Grupo Loang desde mayo de 2026 y está abierto a nuevas oportunidades laborales
     - Idiomas: Español nativo, Inglés B2
 
     DESCRIPCIÓN PERSONAL:
-    Desarrollador web junior con experiencia real en proyectos del sector defensa. Trabajo en equipos 
-    multidisciplinares siguiendo metodologías ágiles. Me apasiona el desarrollo de software y el aprendizaje 
-    continuo de nuevas tecnologías. Me considero una persona constante, resiliente y con gran capacidad de aprendizaje.
+    Desarrollador junior fullstack con experiencia en Angular, TypeScript y Python en proyectos del sector
+    defensa (Indra, Airbus) y en el desarrollo de agentes de IA con LLMs (Claude) para la automatización de
+    procesos de empresa. Experiencia en equipos multidisciplinares con metodología Scrum/Agile. Proactivo,
+    con alta capacidad de aprendizaje y orientado a crear soluciones digitales de calidad.
 
     EXPERIENCIA LABORAL:
-    - Desarrollador Web Fullstack en Bertrandt Technology Spain (Marzo 2025 - Septiembre 2025)
-      * Participé simultáneamente en dos proyectos: Simlab (Indra) e Intermod (Airbus)
-      * Desarrollo frontend con Angular y backend con Python
-      * Trabajo en equipos multidisciplinares con metodología Scrum Agile
-      * Tecnologías: Angular, Python, TypeScript, PostgreSQL
-    - Conductor en Urbaser (2023 - 2025)
-      * Trabajo en el sector de servicios mientras cursaba DAM
+    - Desarrollador de Agentes IA en Grupo Loang, departamento LoangIA (Mayo 2026 - Actualidad, Madrid, en remoto)
+      * Desarrollo de agentes de IA con LLMs (Claude) para presupuestos, cobros y facturación
+      * Automatización de procesos internos del software propio de la empresa
+      * Diseño de soluciones escalables orientadas a su comercialización a clientes
+    - Desarrollador Web Fullstack en Bertrandt Technology Spain (Marzo 2025 - Septiembre 2025, Madrid)
+      * Participación simultánea en los proyectos Simlab (Indra) e Intermod (Airbus)
+      * Desarrollo frontend con Angular y TypeScript; desarrollo backend con Python
+      * Trabajo en equipos multidisciplinares con metodología Scrum/Agile
+      * Tecnologías: Angular, TypeScript, Python, PostgreSQL
+    - Conductor en Urbaser (2023 - 2025, Madrid)
+      * Trabajo en el sector servicios mientras cursaba DAM
 
     HABILIDADES FRONTEND:
     - Angular: 80%
@@ -59,23 +67,42 @@ export default async function handler(req, res) {
     - SQL: 70%
     - PostgreSQL: 65%
 
+    INTELIGENCIA ARTIFICIAL:
+    - Agentes de IA, LLMs, IA generativa, Prompt engineering, Claude, automatización de procesos
+
     HERRAMIENTAS Y METODOLOGÍAS:
-    - VS Code, Git, GitHub, Apache NetBeans
+    - Git, GitHub, Jira, Bitbucket, VS Code, Apache NetBeans
     - Scrum, Agile, metodologías ágiles
 
     EDUCACIÓN:
-    - Desarrollo de Aplicaciones Multiplataforma (DAM)
+    - Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)
       IES Melchor Gaspar de Jovellanos (2023 - 2025)
     - Bachillerato Tecnológico
       IES Humanes (2020 - 2022)
 
     CURSOS:
-    - Desarrollo Web Completo con HTML5, CSS3, JS, AJAX, PHP y MySQL
+    - Desarrollo Web Completo: HTML5, CSS3, JS, AJAX, PHP y MySQL
       Udemy (Enero 2026 - Actualmente en curso)
 
     PROYECTOS:
 
-    1. PDFCorrector (En desarrollo - 90% completado)
+    1. RoadPack
+    - App social para moteros: graba rutas con GPS (también en segundo plano con el móvil bloqueado),
+      organiza quedadas con el grupo y conecta con otros riders
+    - Disponible como web (PWA) y como app Android nativa (APK) con login de Google
+    - Stack: Angular, TypeScript, Capacitor, Supabase, Leaflet (mapas de OpenStreetMap), PWA
+    - Web: https://roadpack.vercel.app
+    - Descarga Android: https://github.com/CarlosMurielCuevas/roadpack-app/releases/latest
+
+    2. Lista de la compra familiar
+    - Aplicación web fullstack para que los miembros de una familia compartan la lista de la compra
+    - Búsqueda de alimentos con la API de Open Food Facts; un usuario puede pertenecer a varias familias
+      (crear una familia genera un código de invitación para compartir)
+    - Botón "Compra realizada" que vacía la lista; diseño mobile-first 100% responsive
+    - Stack: Angular, TypeScript, FastAPI, SQLAlchemy, Alembic, PostgreSQL, JWT, Docker, pytest
+    - GitHub: https://github.com/CarlosMurielCuevas/lista-compra-familiar
+
+    3. PDFCorrector (En desarrollo - 90% completado)
     - Aplicación web fullstack que corrige errores ortográficos en PDFs usando IA
     - Preserva el diseño original del documento tras la corrección
     - Stack: Angular 20, TypeScript, Python 3.13, FastAPI, Groq AI (Llama 3.3), pdfplumber, reportlab
@@ -87,7 +114,7 @@ export default async function handler(req, res) {
     - GitHub: https://github.com/CarlosMurielCuevas/pdfcorrector
     - Demo: https://pdfcorrector.vercel.app
 
-    2. Portfolio Personal (Este mismo portfolio)
+    4. Portfolio Personal (Este mismo portfolio)
     - Portfolio web con Angular standalone, lazy loading y SCSS modular
     - Incluye chat IA integrado (este mismo asistente) usando OpenRouter
     - Formulario de contacto funcional con EmailJS que envía emails reales
@@ -96,11 +123,18 @@ export default async function handler(req, res) {
     - GitHub: https://github.com/CarlosMurielCuevas/portfolio
     - Demo: https://portfolio-three-rho-i91r5ox32f.vercel.app
 
+    5. VideoEditor
+    - Editor de vídeo de escritorio: importación de clips con lectura de metadatos (FFprobe), previsualización,
+      timeline multipista con arrastrar y soltar y exportación con FFmpeg con resolución y calidad configurables
+    - Stack: Electron, JavaScript, Node.js, FFmpeg (fluent-ffmpeg)
+    - GitHub: https://github.com/CarlosMurielCuevas/editor-video
+
     CONTACTO:
     - Email: carlosmurielcuevas@gmail.com
-    - Teléfono: 682721487
+    - Teléfono: +34 682 721 487
     - GitHub: https://github.com/CarlosMurielCuevas
-    - Disponible para entrevistas y nuevas oportunidades laborales
+    - LinkedIn: https://www.linkedin.com/in/carlos-muriel-cuevas-85a07a383
+    - Abierto a entrevistas y nuevas oportunidades laborales
   `;
 
   try {

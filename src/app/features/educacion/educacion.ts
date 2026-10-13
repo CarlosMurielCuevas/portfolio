@@ -11,10 +11,10 @@ import { CommonModule } from '@angular/common';
 export class EducacionComponent {
   educacion = [
     {
-      titulo: 'Desarrollo de Aplicaciones Multiplataforma',
+      titulo: 'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)',
       centro: 'IES Melchor Gaspar de Jovellanos',
       periodo: '2023 - 2025',
-      tipo: 'Formación Profesional',
+      tipo: 'Formación Profesional de Grado Superior',
       icono: '🎓'
     },
     {
@@ -28,9 +28,9 @@ export class EducacionComponent {
 
   cursos = [
     {
-      titulo: 'Desarrollo Web Completo con HTML5, CSS3, JS, AJAX, PHP y MySQL',
+      titulo: 'Desarrollo Web Completo: HTML5, CSS3, JS, AJAX, PHP y MySQL',
       plataforma: 'Udemy',
-      periodo: 'Enero 2026 - Actualmente',
+      periodo: 'Enero 2026 - Actualidad',
       icono: '💻'
     }
   ];
